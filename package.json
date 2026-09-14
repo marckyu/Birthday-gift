@@ -1,0 +1,78 @@
+{
+  "name": "happy-birthday-cherry",
+  "version": "1.0.0",
+  "description": "A cute pixel-art birthday flip card website for Cherry 🌸",
+  "private": true,
+  "type": "module",
+  "main": "index.html",
+  "homepage": ".",
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "birthday",
+    "flip-card",
+    "pixel-art",
+    "cherry-blossom",
+    "static-site",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "scripts": {
+    "start": "live-server --port=3000 --open=index.html --watch=. --ignore=node_modules,.git,package-lock.json --no-browser=false",
+    "dev": "live-server --port=3000 --open=index.html --watch=. --ignore=node_modules,.git,package-lock.json",
+    "serve": "live-server --port=3000 --open=index.html",
+    "serve:no-open": "live-server --port=3000",
+    "serve:8080": "live-server --port=8080 --open=index.html",
+    "python": "python -m http.server 3000",
+    "python3": "python3 -m http.server 3000",
+    "build": "echo 'Static site — no build needed. Files are ready to deploy.'",
+    "clean": "rimraf node_modules package-lock.json",
+    "reinstall": "npm run clean && npm install",
+    "validate:html": "npx --yes html-validate index.html",
+    "format": "npx --yes prettier --write \"*.{html,css,js,json,md}\"",
+    "format:check": "npx --yes prettier --check \"*.{html,css,js,json,md}\"",
+    "lint:css": "npx --yes stylelint \"*.css\" --fix",
+    "deploy:gh": "git subtree push --prefix . origin gh-pages",
+    "deploy:surge": "npx --yes surge . happy-birthday-cherry.surge.sh",
+    "deploy:netlify": "npx --yes netlify-cli deploy --prod --dir=.",
+    "size": "npx --yes gzip-size-cli index.html style.css script.js --raw",
+    "outdated": "npm outdated",
+    "info": "npm ls --depth=0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "rimraf": "^5.0.5"
+  },
+  "optionalDependencies": {
+    "html-validate": "^8.9.1",
+    "prettier": "^3.1.0",
+    "stylelint": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "iOS >= 12",
+    "Android >= 8"
+  ],
+  "files": [
+    "index.html",
+    "style.css",
+    "script.js",
+    "cherryblossom.gif",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/happy-birthday-cherry.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/happy-birthday-cherry/issues"
+  }
+}
