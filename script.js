@@ -226,7 +226,7 @@ function fireConfetti(count) {
     document.body.appendChild(fragment);
 }
 
-setTimeout(function () { blowBtn.classList.add('ready'); }, 6600);
+setTimeout(function () { blowBtn.classList.add('ready'); }, 7600);
 giftbox.classList.add('pre-entrance');
 
 const balloonColors = ['c-pink-1', 'c-pink-2', 'c-pink-3', 'c-pink-4', 'c-pink-5'];

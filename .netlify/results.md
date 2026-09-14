@@ -1,0 +1,7 @@
+The birthday cake candle animation was out of sync with the rest of the intro sequence, which made the cake screen feel laggy or broken the first time the page loads.
+
+The cake builds itself piece by piece through a chained SVG animation that finishes at the 6.6 second mark. The candle, however, was set to slide onto the cake starting at the 6 second mark and finish at 6.75 seconds, and its flame started flickering at 6.5 seconds — all while the cake's frosting was still being drawn. On top of that, the "Hipan mo naaa" (blow) button was becoming clickable at 6.6 seconds, before the candle had even finished sliding into place. The combined effect was several animations overlapping and firing out of order right as the page loads, which read as a delay or glitch.
+
+The candle, flame, and button timings were resequenced so each step only starts once the previous one has actually finished: the candle now slides into place right after the cake is fully formed, the flame ignites only once the candle has landed, and the blow button becomes active shortly after the flame is visible. The visual outcome and overall wait time are essentially unchanged — the fix removes the overlapping/premature timing rather than speeding anything up or slowing it down.
+
+While reviewing the rest of the site (gift box reveal, flip-card letter, fireworks, confetti, and balloons), no other functional bugs, missing assets, or broken element references were found — all script and CSS hooks resolve correctly and the JavaScript has no syntax errors.
