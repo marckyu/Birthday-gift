@@ -792,7 +792,11 @@ body {
     width: 80px;
     height: 90%;
     margin-left: -40px;
-    background: linear-gradient(to top, rgba(255, 248, 196, 0.😎 0%, rgba(255, 220, 130, 0.5) 25%, rgba(255, 105, 180, 0.2) 55%, transparent 100%));
+    background: linear-gradient(to top,
+            rgba(255, 248, 196, 0.8) 0%,
+            rgba(255, 220, 130, 0.5) 25%,
+            rgba(255, 105, 180, 0.2) 55%,
+            transparent 100%);
     pointer-events: none;
     z-index: 2;
     transform-origin: bottom center;
@@ -954,7 +958,10 @@ body {
 .gift-sparkle {
     position: absolute;
     color: #fff8c4;
-    text-shadow: 0 0 8px rgba(255, 248, 196, 0.95), 0 0 16px rgba(255, 105, 180, 0.😎, 0 0 24px rgba(255, 105, 180, 0.4));
+    text-shadow:
+        0 0 8px rgba(255, 248, 196, 0.95),
+        0 0 16px rgba(255, 105, 180, 0.8),
+        0 0 24px rgba(255, 105, 180, 0.4);
     opacity: 0;
     animation: sparkleFloat 3s ease-in-out infinite;
     will-change: transform, opacity;
@@ -988,7 +995,7 @@ body {
     flex-wrap: wrap;
     gap: 8px 14px;
     max-width: 90%;
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Press Start 2P', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', monospace;
     font-size: clamp(1.4rem, 4vw, 2.6rem);
     line-height: 1.4;
     position: relative;
@@ -1046,7 +1053,7 @@ body {
 
 .gift-subtitle {
     position: relative;
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Press Start 2P', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', monospace;
     color: #b82a6b;
     background: #fff8c4;
     padding: 14px 36px;
@@ -1336,7 +1343,7 @@ body {
     background: #fff8fb;
     display: flex;
     flex-direction: column;
-    padding: 22px 20px 18px;
+    padding: 16px 14px 12px;
     z-index: 2;
 }
 
@@ -1372,7 +1379,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 8px;
-    margin-top: 12px;
+    margin-top: 10px;
     flex-shrink: 0;
 }
 
@@ -1877,17 +1884,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin-bottom: 12px;
+    gap: 6px;
+    margin-bottom: 6px;
     flex-shrink: 0;
     position: relative;
     z-index: 2;
 }
 
 .back-header h2 {
-    font-size: clamp(0.5rem, 1.2vw, 0.7rem);
+    font-size: clamp(0.5rem, 1.1vw, 0.68rem);
     color: #b34a6e;
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Press Start 2P', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', monospace;
     text-shadow: 2px 2px 0 #ffd0e0;
     letter-spacing: 1px;
 }
@@ -1898,7 +1905,7 @@ body {
 
 .letter-box {
     background: #ffffff;
-    padding: 14px 16px;
+    padding: 10px 12px;
     border: 3px solid #d63384;
     width: 100%;
     flex: 1;
@@ -1909,22 +1916,31 @@ body {
 }
 
 .letter-content {
-    font-size: clamp(0.4rem, 0.95vw, 0.58rem);
-    line-height: 2;
+    font-size: clamp(0.5rem, 1vw, 0.65rem);
+    line-height: 1.85;
     color: #4d2e3a;
     text-align: left;
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-right: 6px;
-    font-family: 'Press Start 2P', monospace;
+    padding-right: 4px;
+    font-family: 'Press Start 2P',
+        'Segoe UI Emoji',
+        'Apple Color Emoji',
+        'Noto Color Emoji',
+        'Twemoji Mozilla',
+        'EmojiOne Color',
+        'Android Emoji',
+        sans-serif;
     min-height: 0;
     word-break: break-word;
 }
 
 .letter-content.static-text {
     display: block;
-    padding-right: 6px;
+    padding-right: 4px;
+    font-size: clamp(0.5rem, 1vw, 0.65rem);
+    line-height: 1.85;
 }
 
 .letter-content::-webkit-scrollbar {
@@ -1942,8 +1958,8 @@ body {
 }
 
 .footer-decoration {
-    margin-top: 8px;
-    font-size: 9px;
+    margin-top: 6px;
+    font-size: 8px;
     color: #d63384;
     letter-spacing: 6px;
     flex-shrink: 0;
@@ -2014,16 +2030,25 @@ body {
     }
 
     .back-header h2 {
-        font-size: 0.45rem;
+        font-size: 0.48rem;
+    }
+
+    .page-front {
+        padding: 14px 12px 10px;
     }
 
     .letter-box {
-        padding: 10px 12px;
+        padding: 8px 10px;
     }
 
     .letter-content {
-        font-size: 0.38rem;
-        line-height: 1.9;
+        font-size: 0.46rem;
+        line-height: 1.8;
+    }
+
+    .letter-content.static-text {
+        font-size: 0.46rem;
+        line-height: 1.8;
     }
 
     .page-btn {
@@ -2136,9 +2161,18 @@ body {
         margin-bottom: -115px;
     }
 
+    .page-front {
+        padding: 12px 10px 8px;
+    }
+
     .letter-content {
-        font-size: 0.36rem;
-        line-height: 1.85;
+        font-size: 0.42rem;
+        line-height: 1.75;
+    }
+
+    .letter-content.static-text {
+        font-size: 0.42rem;
+        line-height: 1.75;
     }
 
     .front .sub {
