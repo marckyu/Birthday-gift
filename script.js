@@ -1,7 +1,7 @@
-const letterHeader = `Happy birthday, Cherry! 🌷`;
+const letterHeader = `Happy Birthday Cherry! 🌷`;
 
 const letterBody =
-    `I hope you have a really good day today, and sana makapagpahinga ka rin kahit saglit from all the things that keep you busy and tired. Deserve mong magkaroon ng day na less stress, less pagod, and more reasons to smile. 🤍`;
+    `I hope you have a really good day today, And Sana makapagpahinga ka rin kahit saglit from all the things that keep you busy and tired. Deserve mong magkaroon ng day na less stress, less pagod, and more reasons to smile. 🤍`;
 
 const letterTextEl = document.getElementById('letterText');
 const card = document.getElementById('card');
@@ -640,4 +640,4 @@ document.addEventListener('click', function initAudio() {
     getAudioCtx();
 }, { once: true });
 
-console.log('Happy Birthday, Cherry!');
+console.log('Happy Birthday, Cherry!!!');
